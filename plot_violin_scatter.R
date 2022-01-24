@@ -81,7 +81,7 @@ plot_violin_scatter <- function(input, output, session, df) {
     df_vis <- df()
     
     # Now we can create a plot of the data.
-    speed_alcohol <- data %>% plot_ly(x = ~num_speed, 
+    speed_alcohol <- df_vis %>% plot_ly(x = ~num_speed, 
                                       y = ~num_alcohol, 
                                       text = ~State, 
                                       type = 'scatter',
