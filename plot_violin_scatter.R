@@ -80,6 +80,7 @@ plot_violin_scatter <- function(input, output, session, df) {
     # We do this by calling it as a function df(). 
     df_vis <- df()
     
+    model1 <- lm(data = df_vis, num_alcohol~num_speed)
     # Now we can create a plot of the data.
     speed_alcohol <- df_vis %>% plot_ly(x = ~num_speed, 
                                       y = ~num_alcohol, 
@@ -87,6 +88,7 @@ plot_violin_scatter <- function(input, output, session, df) {
                                       type = 'scatter',
                                       height = 800,
                                       marker = list(color = "steelblue"))
+    speed_alcohol <- speed_alcohol %>% add_trace(x = ~num_speed, y = fitted(model1), mode = 'lines', name = "Linear model")
     speed_alcohol <- speed_alcohol %>% layout(title = 'Speeding VS Alcohol-Impaired',
                                               xaxis = list(
                                                 title = "Number of drivers who were speeding",
