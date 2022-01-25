@@ -47,7 +47,7 @@ plot_ggplot <- function(input, output, session, df) {
                                  marker = list(color = "steelblue"))
     state <- state %>% layout(title = 'Number of drivers involved in fatal collisions per billion miles',
                               xaxis = list(
-                                title = "",
+                                title = "Number of drivers per billion miles",
                                 tickfont = list(
                                   size = 12,
                                   color = 'rgb(107, 107, 107)')),
