@@ -43,7 +43,7 @@ plot_ggplot <- function(input, output, session, df) {
                                              line = list(color = "black", 
                                                          width = 1)))
     state <- state %>% add_trace(x = ~New,
-                                 name = "Number of drivers involved in fatal collisions per billion miles without previous accidents",
+                                 name = "Number of drivers involved in fatal collisions without previous accidents",
                                  marker = list(color = "steelblue"))
     state <- state %>% layout(title = 'Number of drivers involved in fatal collisions per billion miles',
                               xaxis = list(
