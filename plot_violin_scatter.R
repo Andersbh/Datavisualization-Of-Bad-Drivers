@@ -88,7 +88,7 @@ plot_violin_scatter <- function(input, output, session, df) {
                                       type = 'scatter',
                                       height = 800,
                                       marker = list(color = "steelblue"))
-    speed_alcohol <- speed_alcohol %>% add_trace(x = ~num_speed, y = fitted(model1), mode = 'lines', name = "Linear model")
+    speed_alcohol <- speed_alcohol %>% add_trace(x = ~num_speed, y = fitted(model1), mode = 'lines', name = "Linear Trendline")
     speed_alcohol <- speed_alcohol %>% layout(title = 'Speeding VS Alcohol-Impaired',
                                               xaxis = list(
                                                 title = "Number of drivers who were speeding",
